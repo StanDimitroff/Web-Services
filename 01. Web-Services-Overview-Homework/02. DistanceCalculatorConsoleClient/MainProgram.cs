@@ -20,7 +20,7 @@
 
             DistanceCalculatorClient calculator = new DistanceCalculatorClient();
             double result = calculator.CalculateDistance(startPoint, endPont);
-            Console.WriteLine("Distance:" + result);
+            Console.WriteLine("Distance: " + result);
         }
     }
 }

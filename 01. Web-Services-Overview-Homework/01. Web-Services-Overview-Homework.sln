@@ -3,12 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DistanceCalculatorService", "01. DistanceCalculator\01. DistanceCalculatorService.csproj", "{5D4B7A62-9540-4CB9-8658-BE069A0D1F49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DistanceCalculatorService", "01. DistanceCalculatorService\01. DistanceCalculatorService.csproj", "{5D4B7A62-9540-4CB9-8658-BE069A0D1F49}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. DistanceCalculatorConsoleClient", "02. DistanceCalculatorConsoleClient\02. DistanceCalculatorConsoleClient.csproj", "{6FE3E40E-E415-4D38-88F1-8B4E2324C71E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{5D4B7A62-9540-4CB9-8658-BE069A0D1F49} = {5D4B7A62-9540-4CB9-8658-BE069A0D1F49}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
