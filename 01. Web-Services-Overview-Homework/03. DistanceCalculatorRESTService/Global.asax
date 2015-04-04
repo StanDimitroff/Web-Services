@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="_03.DistanceCalculatorRESTService.WebApiApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="DistanceCalculatorRESTService.WebApiApplication" Language="C#" %>

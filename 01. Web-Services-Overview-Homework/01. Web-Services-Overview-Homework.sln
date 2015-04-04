@@ -5,9 +5,11 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DistanceCalculatorSOAPService", "01. DistanceCalculatorSOAPService\01. DistanceCalculatorSOAPService.csproj", "{5D4B7A62-9540-4CB9-8658-BE069A0D1F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. DistanceCalculatorConsoleClient", "02. DistanceCalculatorConsoleClient\02. DistanceCalculatorConsoleClient.csproj", "{6FE3E40E-E415-4D38-88F1-8B4E2324C71E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. DistanceCalculatorSOAPConsoleClient", "02. DistanceCalculatorSOAPConsoleClient\02. DistanceCalculatorSOAPConsoleClient.csproj", "{6FE3E40E-E415-4D38-88F1-8B4E2324C71E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. DistanceCalculatorRESTService", "03. DistanceCalculatorRESTService\03. DistanceCalculatorRESTService.csproj", "{4F88E883-EC64-4CE7-B630-727EC01B1BDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. DistanceCalculatorRESTService", "03. DistanceCalculatorRESTService\03. DistanceCalculatorRESTService.csproj", "{90D03FD7-ED67-477C-825C-4B3E0575FFE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. DistanceCalculatorRESTConsoleClient", "04. DistanceCalculatorRESTConsoleClient\04. DistanceCalculatorRESTConsoleClient.csproj", "{44C9ED6A-D718-441F-87F7-600EB1849484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,14 @@ Global
 		{6FE3E40E-E415-4D38-88F1-8B4E2324C71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FE3E40E-E415-4D38-88F1-8B4E2324C71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FE3E40E-E415-4D38-88F1-8B4E2324C71E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F88E883-EC64-4CE7-B630-727EC01B1BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F88E883-EC64-4CE7-B630-727EC01B1BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F88E883-EC64-4CE7-B630-727EC01B1BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F88E883-EC64-4CE7-B630-727EC01B1BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D03FD7-ED67-477C-825C-4B3E0575FFE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D03FD7-ED67-477C-825C-4B3E0575FFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D03FD7-ED67-477C-825C-4B3E0575FFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D03FD7-ED67-477C-825C-4B3E0575FFE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C9ED6A-D718-441F-87F7-600EB1849484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C9ED6A-D718-441F-87F7-600EB1849484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C9ED6A-D718-441F-87F7-600EB1849484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C9ED6A-D718-441F-87F7-600EB1849484}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
