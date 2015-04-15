@@ -31,12 +31,17 @@ namespace BlogSystem.WebApi.Controllers
                 Tags = x.Tags.Select(t => t.Name)
             });
 
+            if (posts == null)
+            {
+                return this.NotFound();
+            }
+
             return this.Ok(posts);
         }
 
         [HttpGet]
         [Route("{postId:int}")]
-        public IHttpActionResult GetPost(int postId)
+        public IHttpActionResult GetById(int postId)
         {
             var post = this.Data.Posts.GetById(postId);
             if (post == null)
@@ -45,7 +50,7 @@ namespace BlogSystem.WebApi.Controllers
             }
 
             return this.Ok(post);
-        }   
+        }
 
         [HttpGet]
         [Route("{postId:int}/tags")]
@@ -54,7 +59,7 @@ namespace BlogSystem.WebApi.Controllers
             var post = this.Data.Posts.GetById(postId);
             if (post == null)
             {
-                return this.BadRequest("No such post");
+                return this.BadRequest("No post found");
             }
 
             var postTags = post.Tags.Select(x => x.Name);
@@ -63,23 +68,41 @@ namespace BlogSystem.WebApi.Controllers
 
         [HttpPost]
         [Route("add")]
-        public IHttpActionResult AddPost([FromBody]int userId, [FromBody]string title, [FromBody]string content)
+        public IHttpActionResult AddPost(Post post)
         {
-            var user = this.Data.Users.GetById(userId);
-            if (user == null)
-            {
-                return this.BadRequest("No such user");
-            }
-            var post = new Post()
-            {
-                Title = title,
-                Content = content,
-                UserId = userId,
-                User = user
-            };
+            var addedPost = this.Data.Posts.Add(post);
+            this.Data.SaveChanges();
+            return this.Ok(addedPost);
+        }
 
-            var a = this.Data.Posts.Add(post);
-            return this.Ok(a.Id);
+
+        [HttpPost]
+        [Route("edit/{postId:int}")]
+        public IHttpActionResult EditPost(int postId, Post post)
+        {
+            if (postId != post.Id)
+            {
+                return this.BadRequest("Can not edit this post");
+            }
+
+            var editedPost = this.Data.Posts.Update(post);
+            this.Data.SaveChanges();
+            return this.Ok(editedPost);
+        }
+
+        [HttpDelete]
+        [Route("delete/{postId:int}")]
+        public IHttpActionResult DeletePost(int postId)
+        {
+            var post = this.Data.Posts.Find(p => p.Id == postId).FirstOrDefault();
+            if (post == null)
+            {
+                return this.NotFound();
+            }
+
+            this.Data.Posts.Delete(post);
+            this.Data.SaveChanges();
+            return this.Ok(post.Id);
         }
     }
 }
